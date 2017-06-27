@@ -1,8 +1,20 @@
+
 ## learnyounode notes
 
-process.argv[]
+   » To print these instructions again, run: learnyounode print                  
+   » To execute your program in a test environment, run: learnyounode run program.js
+   » To verify your program, run: learnyounode verify program.js                
+   » For help run: learnyounode help
+
+### baby steps
+
 coerce string into number: `+<number>`, `Number(<number>)`
+process.argv[]
+
+### my first i/o
+
 fs module - filesystem
+
 Buffer::toString()
 String::split()
     
@@ -13,7 +25,12 @@ String::split()
     $ node io.js io.js 
     30
 
-    
+    // note you can avoid the .toString() by passing 'utf8' as the
+    // second argument to readFileSync, then you'll get a String!
+    //
+    // fs.readFileSync(process.argv[2], 'utf8').split('\n').length - 1
+
+
 idiomatic Node.js callbacks normally have the signature:
 
     function callback (err, data) { /* ... */ }
